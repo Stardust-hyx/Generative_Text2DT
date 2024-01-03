@@ -38,7 +38,7 @@ The preprocessing procedure involves manual intervention, see **data/preprocess.
 #### For NL-style linearization
 ```shell
 cd Seq2seq_NL
-# set a different random seed for each run
+# please set a different random seed for each run
 bash train_eval.sh
 # ensemble predictions by multiple models
 python ensemble.py
@@ -47,7 +47,7 @@ python ensemble.py
 #### For AugNL-style linearization
 ```shell
 cd Seq2seq_AugNL
-# set a different random seed for each run
+# please set a different random seed for each run
 bash train_eval.sh
 # ensemble predictions by multiple models
 python ensemble.py
@@ -77,7 +77,7 @@ python chatglm_NL.py
 *Note that, please create a new environment following the instruction [here](https://github.com/Stardust-hyx/Instruction_Tuning).*
 ```shell
 cd Autoregressive_SFT
-# set a different random seed for each run
+# please set a different random seed for each run
 bash train_eval.sh
 # ensemble predictions by multiple models
 python ensemble.py
