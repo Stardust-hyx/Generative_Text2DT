@@ -1,6 +1,7 @@
 # Generative Text2DT
 [![GitHub stars](https://img.shields.io/github/stars/Stardust-hyx/Generative_Text2DT?style=flat-square)](https://github.com/Stardust-hyx/Generative_Text2DT/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/Stardust-hyx/Generative_Text2DT?style=flat-square&color=blueviolet)](https://github.com/Stardust-hyx/Generative_Text2DT/network/members)
+[![DOI](https://zenodo.org/badge/738031531.svg)](https://zenodo.org/doi/10.5281/zenodo.10453456)
 
 Source code for the paper, *Generative models for automatic medical decision rule extraction from text*.
 
