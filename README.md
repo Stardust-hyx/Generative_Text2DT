@@ -40,7 +40,7 @@ The preprocessing procedure involves manual intervention, see **data/preprocess.
 cd Seq2seq_NL
 # please set a different random seed for each run
 bash train_eval.sh
-# ensemble predictions by multiple models
+# assemble predictions by multiple models
 python ensemble.py
 ```
 
@@ -49,7 +49,7 @@ python ensemble.py
 cd Seq2seq_AugNL
 # please set a different random seed for each run
 bash train_eval.sh
-# ensemble predictions by multiple models
+# assemble predictions by multiple models
 python ensemble.py
 ```
 
@@ -79,6 +79,6 @@ python chatglm_NL.py
 cd Autoregressive_SFT
 # please set a different random seed for each run
 bash train_eval.sh
-# ensemble predictions by multiple models
+# assemble predictions by multiple models
 python ensemble.py
 ```
