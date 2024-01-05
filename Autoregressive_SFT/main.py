@@ -165,7 +165,6 @@ def main():
         lora_dropout = model_args.lora_dropout
         lora_alpha = model_args.lora_alpha
         print(target_modules)
-        print(lora_rank)
         peft_config = LoraConfig(
             task_type=TaskType.CAUSAL_LM,
             target_modules=target_modules,

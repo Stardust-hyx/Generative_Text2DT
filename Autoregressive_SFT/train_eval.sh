@@ -6,7 +6,7 @@ LR=2e-4
 SEED=2022
 BatchSize=8
 model_name_or_path="/disk3/hyx/huggingface/chatglm-6b"   # LLM底座模型路径，或者是huggingface hub上的模型名称
-your_data_path="../datasets/Text2DT"  # 填入数据集所在的文件夹路径
+your_data_path="../data/Text2DT_SFT"  # 填入数据集所在的文件夹路径
 your_checkpopint_path="./outputs"  # 填入用来存储模型的路径
 
 CUDA_VISIBLE_DEVICES=1 python main.py \
@@ -24,7 +24,7 @@ CUDA_VISIBLE_DEVICES=1 python main.py \
     --max_source_length 225 \
     --max_target_length 300 \
     --per_device_train_batch_size $BatchSize \
-    --per_device_eval_batch_size 1 \
+    --per_device_eval_batch_size 16 \
     --gradient_accumulation_steps 1 \
     --predict_with_generate \
     --max_steps 2000 \

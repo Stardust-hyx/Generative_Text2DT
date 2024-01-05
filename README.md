@@ -29,6 +29,7 @@ cd data
 python preprocess.py
 cd Text2DT
 python data_augment.py
+cd ../Text2DT_SFT
 python convert.py
 ```
 The preprocessing procedure involves manual intervention, see **data/preprocess.py** for details.

@@ -268,11 +268,14 @@ def convert_sample(input_doc, NER=False, RE=False, TreeS=False, COT=False):
 
     return samples
 
+def concat(list_fpaths, out_fpath):
+    out_f = open(out_fpath, 'w', encoding='utf-8')
+    for fpath in list_fpaths:
+        for line in open(fpath).readlines():
+            print(line.strip(), file=out_f)
+
 if __name__ == '__main__':
     in_dir = './Text2DT'
-    out_dir = './Text2DT_SFT'
-
-    os.makedirs(out_dir, exist_ok=True)
 
     for root, dirs, files in os.walk(in_dir):
         for fn in files:
@@ -283,7 +286,9 @@ if __name__ == '__main__':
             fname = fn.split('.')[0]
             print(f'{fn} -> {fname}.json')
 
-            json_f = open(os.path.join(out_dir, fname + '.json'), 'w', encoding='utf-8')
+            json_f = open(fname + '.json', 'w', encoding='utf-8')
             for sample in samples:
                 json_line = json.dumps(sample, ensure_ascii=False)
                 print(json_line, file=json_f)
+
+    concat(['train_dev_dt.json', 'aug_dt.json'], 'train_dev_dt_aug.json')
