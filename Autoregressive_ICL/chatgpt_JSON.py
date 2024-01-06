@@ -2,6 +2,8 @@
 import os, time
 import json
 import openai
+from metric import text2dt_metric
+
 #这里是你的获取到的api
 openai.api_key = ''
 
@@ -52,8 +54,7 @@ for i, text in enumerate(list_text):
     try:
         tree = json.loads(reply, strict=False)
     except:
-        print('Invalid Format!', file=log_f, flush=True)
-        exit(0)
+        tree = []
 
     sample = {
         "text": text,
@@ -65,3 +66,8 @@ for i, text in enumerate(list_text):
 
 out_f = open(out_fn, 'w', encoding='utf-8')
 json.dump(samples, out_f, ensure_ascii=False, indent=2)
+
+with open("../json/Text2DT_test.json", "r", encoding='utf-8') as f:
+        gold_data = json.load(f)
+
+result = text2dt_metric(gold_data, samples)

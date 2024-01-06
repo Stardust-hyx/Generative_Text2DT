@@ -2,8 +2,10 @@
 import os, time
 import json
 import zhipuai
+from metric import text2dt_metric
+
 # your api key
-zhipuai.api_key = ""
+zhipuai.api_key = "952c9fb92e446c40be9bbb5c44efb1a4.tzGT7qac3yrwZreu"
 
 model = "chatglm_pro"
 
@@ -66,3 +68,8 @@ for i, text in enumerate(list_text):
 
 out_f = open(out_fn, 'w', encoding='utf-8')
 json.dump(samples, out_f, ensure_ascii=False, indent=2)
+
+with open("../json/Text2DT_test.json", "r", encoding='utf-8') as f:
+        gold_data = json.load(f)
+
+result = text2dt_metric(gold_data, samples)
