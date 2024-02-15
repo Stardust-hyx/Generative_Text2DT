@@ -3,7 +3,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/Stardust-hyx/Generative_Text2DT?style=flat-square&color=blueviolet)](https://github.com/Stardust-hyx/Generative_Text2DT/network/members)
 [![DOI](https://zenodo.org/badge/738031531.svg)](https://zenodo.org/doi/10.5281/zenodo.10453456)
 
-Source code for the paper, *Generative models for automatic medical decision rule extraction from text*.
+Source code for the paper, *Generative models for automatic medical decision rule extraction from text*, under the [MIT License](https://mit-license.org/).
 
 ## Quick links
 
